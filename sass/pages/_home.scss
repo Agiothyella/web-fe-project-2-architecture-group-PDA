@@ -1,0 +1,56 @@
+.container {
+  display: grid;
+  grid-template-columns:
+    [fill-start] 1fr
+    [content-start] minmax(min-content, 130rem) [content-end]
+    1fr [fill-end];
+  grid-template-rows: 85vh;
+  justify-items: center;
+}
+
+.header {
+  grid-column: fill-start / fill-end;
+  position: relative;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.service {
+  grid-column: fill-start / content-end;
+  font-family: "Nunito", sans-serif;
+}
+
+.influence {
+  grid-column: content-start / content-end;
+}
+
+.workflow {
+  grid-column: content-start / content-end;
+}
+
+.project {
+  grid-column: fill-start / fill-end;
+}
+
+.contact {
+  grid-column: content-start / content-end;
+}
+
+.about {
+  grid-column: content-start / content-end;
+}
+
+.footer {
+  grid-column: fill-start / fill-end;
+}
