@@ -1,12 +1,58 @@
 .service {
-  background-color: palegoldenrod;
-  width: 100%;
-  padding: 4rem 0 8rem 0;
-  margin: 6rem 0 0 0;
-  border-top: 2px solid $color-secondary;
-
   &__building {
-    width: max-content;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14rem;
+  }
+
+  &__header {
+    padding-left: 20rem;
+    border-bottom: 2px solid $color-tertiary;
+  }
+
+  &__types {
+    align-self: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+
+  &__type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    fill: $color-tertiary;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+
+  &__detail {
+    font-size: 1.3rem;
+    color: $color-font-grey;
+  }
+
+  &__desc {
+    margin: 0 3rem 0 auto;
+    width: 20%;
+    color: $color-font-grey;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+    text-align: right;
+
+    span {
+      margin-top: 0.5rem;
+      display: block;
+      font-weight: 400;
+      font-style: normal;
+    }
   }
 }

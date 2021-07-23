@@ -1,0 +1,66 @@
+.influence {
+  &__title {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: start;
+    align-self: end;
+    width: 100%;
+    margin-left: 5rem;
+    border-bottom: 2px solid $color-tertiary;
+  }
+
+  &__from {
+    justify-self: end;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 28.5rem));
+    grid-template-rows: 40rem;
+    width: 80%;
+  }
+
+  &__source {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 1px solid $color-quartenery;
+    overflow: hidden;
+    transform: skewX(-10deg) translate3d(0, 0, 0);
+    transition: all 0.2s;
+  }
+
+  &__source:hover {
+    transform: translate(0.35rem, -2.02rem) skewX(-10deg);
+  }
+
+  &__wrapper:hover &__source {
+    transform: translate(0.35rem, -2.02rem) skewX(-10deg);
+  }
+
+  &__img {
+    width: 140%;
+    height: 100%;
+    transform: translateX(-15%) skewX(10deg);
+  }
+
+  &__caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    background-color: $color-dark-1;
+    color: $color-font-light;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    width: 78%;
+    margin: 5rem 0;
+    color: $color-font-grey;
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+}

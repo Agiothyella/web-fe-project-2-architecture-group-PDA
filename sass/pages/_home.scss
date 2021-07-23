@@ -28,11 +28,21 @@
 
 .service {
   grid-column: fill-start / content-end;
+  width: 100%;
+  padding: 4rem 0 4rem 0;
+  margin: 10rem 0 5rem 0;
+  border-top: 3px solid $color-tertiary;
   font-family: "Nunito", sans-serif;
 }
 
 .influence {
-  grid-column: content-start / content-end;
+  grid-column: content-start / fill-end;
+  display: grid;
+  grid-template-columns: minmax(max-content, 2fr) minmax(max-content, 1fr);
+  justify-items: center;
+  width: 100%;
+  border-bottom: 3px solid $color-tertiary;
+  font-family: "Nunito", sans-serif;
 }
 
 .workflow {

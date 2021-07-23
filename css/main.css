@@ -28,9 +28,19 @@ img {
   font-weight: 200;
 }
 
-.t-header-3 {
+.t-header-2 {
   font-size: 3.5rem;
   font-weight: 300;
+}
+
+.t-header-3 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.t-header-4 {
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 
 .u-center-text {
@@ -117,15 +127,15 @@ img {
 
 .header__title {
   padding: 0 2rem 0 3rem;
-  text-shadow: 0 0 1rem #70371a;
-  background-color: rgba(181, 89, 42, 0.3);
+  text-shadow: 0 0 0.4rem #70371a;
+  background-color: rgba(181, 89, 42, 0.85);
   line-height: 14rem;
 }
 
 .header__subtitle {
   margin-top: -1.5rem;
   padding: 0 2rem 0 5rem;
-  background-color: rgba(181, 89, 42, 0.9);
+  background-color: rgba(112, 55, 26, 0.9);
   line-height: 5rem;
 }
 
@@ -137,7 +147,7 @@ img {
   line-height: 2.5rem;
   margin-bottom: -1.5rem;
   padding: 1.5rem 2rem;
-  background-color: rgba(181, 89, 42, 0.7);
+  background-color: rgba(181, 89, 42, 0.9);
   font-size: 1.8rem;
   text-align: right;
 }
@@ -167,8 +177,15 @@ img {
 }
 
 .slider__img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease-in-out;
 }
 
 .slider__hero {
@@ -176,17 +193,126 @@ img {
   height: 100%;
 }
 
-.service {
-  background-color: palegoldenrod;
+.influence__title {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  justify-self: start;
+  align-self: end;
   width: 100%;
-  padding: 4rem 0 8rem 0;
-  margin: 6rem 0 0 0;
-  border-top: 2px solid #b5592a;
+  margin-left: 5rem;
+  border-bottom: 2px solid #f09027;
+}
+
+.influence__from {
+  justify-self: end;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 28.5rem));
+  grid-template-rows: 40rem;
+  width: 80%;
+}
+
+.influence__source {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border: 1px solid #8cbeaa;
+  overflow: hidden;
+  transform: skewX(-10deg) translate3d(0, 0, 0);
+  transition: all 0.2s;
+}
+
+.influence__source:hover {
+  transform: translate(0.35rem, -2.02rem) skewX(-10deg);
+}
+
+.influence__wrapper:hover .influence__source {
+  transform: translate(0.35rem, -2.02rem) skewX(-10deg);
+}
+
+.influence__img {
+  width: 140%;
+  height: 100%;
+  transform: translateX(-15%) skewX(10deg);
+}
+
+.influence__caption {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.influence__text {
+  grid-column: 1 / -1;
+  width: 78%;
+  margin: 5rem 0;
+  color: #464646;
+  font-size: 1.6rem;
+  text-align: justify;
 }
 
 .service__building {
-  width: max-content;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14rem;
+}
+
+.service__header {
+  padding-left: 20rem;
+  border-bottom: 2px solid #f09027;
+}
+
+.service__types {
+  align-self: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+}
+
+.service__type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service__img {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  fill: #f09027;
+}
+
+.service__text {
+  font-size: 1.7rem;
+}
+
+.service__detail {
+  font-size: 1.3rem;
+  color: #464646;
+}
+
+.service__desc {
+  margin: 0 3rem 0 auto;
+  width: 20%;
+  color: #464646;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: right;
+}
+
+.service__desc span {
+  margin-top: 0.5rem;
+  display: block;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
@@ -216,11 +342,21 @@ img {
 
 .service {
   grid-column: fill-start / content-end;
+  width: 100%;
+  padding: 4rem 0 4rem 0;
+  margin: 10rem 0 5rem 0;
+  border-top: 3px solid #f09027;
   font-family: "Nunito", sans-serif;
 }
 
 .influence {
-  grid-column: content-start / content-end;
+  grid-column: content-start / fill-end;
+  display: grid;
+  grid-template-columns: minmax(max-content, 2fr) minmax(max-content, 1fr);
+  justify-items: center;
+  width: 100%;
+  border-bottom: 3px solid #f09027;
+  font-family: "Nunito", sans-serif;
 }
 
 .workflow {
