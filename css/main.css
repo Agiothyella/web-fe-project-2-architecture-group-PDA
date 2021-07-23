@@ -36,11 +36,13 @@ img {
 .t-header-3 {
   font-size: 3rem;
   font-weight: 300;
+  font-family: "Raleway", sans-serif;
 }
 
 .t-header-4 {
   font-size: 2.5rem;
   font-weight: 400;
+  font-family: "Raleway", sans-serif;
 }
 
 .u-center-text {
@@ -102,6 +104,35 @@ img {
 .u-visible {
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+.about__personel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about__person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__photo {
+  border-radius: 50%;
+  filter: saturate(0);
+}
+
+.about__who {
+  text-align: center;
+}
+
+.about__who span {
+  display: block;
+}
+
+.about__company {
+  display: flex;
+  align-items: center;
 }
 
 .header__slider {
@@ -176,6 +207,14 @@ img {
   height: 3.5rem;
 }
 
+.header__btn {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  margin-bottom: -2rem;
+  background-color: #70371a;
+}
+
 .slider__img {
   position: absolute;
   left: 0;
@@ -193,20 +232,19 @@ img {
   height: 100%;
 }
 
-.influence__title {
+.influence__header {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
-  justify-self: start;
+  justify-self: end;
   align-self: end;
   width: 100%;
-  margin-left: 5rem;
   border-bottom: 2px solid #f09027;
 }
 
 .influence__from {
-  justify-self: end;
+  justify-self: center;
   grid-column: 1 / span 1;
-  grid-row: 1 / span 1;
+  grid-row: 1 / span 2;
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 28.5rem));
   grid-template-rows: 40rem;
@@ -219,16 +257,19 @@ img {
   position: relative;
   border: 1px solid #8cbeaa;
   overflow: hidden;
-  transform: skewX(-10deg) translate3d(0, 0, 0);
   transition: all 0.2s;
 }
 
+.influence__wrapper {
+  transform: skewX(-10deg) translate3d(0, 0, 0);
+}
+
 .influence__source:hover {
-  transform: translate(0.35rem, -2.02rem) skewX(-10deg);
+  transform: translateY(-2rem);
 }
 
 .influence__wrapper:hover .influence__source {
-  transform: translate(0.35rem, -2.02rem) skewX(-10deg);
+  transform: translateY(-2rem);
 }
 
 .influence__img {
@@ -243,30 +284,70 @@ img {
   bottom: 0;
   width: 100%;
   padding: 2rem;
-  background-color: #000;
+  background-color: #b5592a;
   color: #fff;
   font-size: 2rem;
   text-align: center;
 }
 
 .influence__text {
-  grid-column: 1 / -1;
-  width: 78%;
-  margin: 5rem 0;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  justify-self: start;
+  margin: 4rem 0;
+  padding: 3rem;
+  width: 90%;
+  background-color: #ebebeb;
   color: #464646;
   font-size: 1.6rem;
   text-align: justify;
 }
 
+.project__header {
+  border-bottom: 2px solid #f09027;
+  text-align: center;
+}
+
+.project__works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(0, 30rem));
+  padding: 0 6rem;
+  column-gap: 4rem;
+  row-gap: 6rem;
+}
+
+.project__work {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+}
+
+.project__picture {
+  width: 100%;
+  height: 100%;
+}
+
+.project__name {
+  text-transform: uppercase;
+}
+
+.project__type {
+  color: #f09027;
+}
+
 .service__building {
   display: flex;
   align-items: center;
-  gap: 14rem;
+  justify-content: space-between;
+  padding-right: 2rem;
 }
 
 .service__header {
   padding-left: 20rem;
   border-bottom: 2px solid #f09027;
+  width: max-content;
+  font-weight: 300;
 }
 
 .service__types {
@@ -280,6 +361,13 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background-color: #ebebeb;
+}
+
+.service__type:link, .service__type:visited {
+  text-decoration: none;
 }
 
 .service__img {
@@ -287,9 +375,15 @@ img {
   height: 5rem;
   margin-bottom: 1rem;
   fill: #f09027;
+  transition: all 0.2s;
+}
+
+.service__type:hover .service__img {
+  fill: #b5592a;
 }
 
 .service__text {
+  color: #000;
   font-size: 1.7rem;
 }
 
@@ -299,7 +393,7 @@ img {
 }
 
 .service__desc {
-  margin: 0 3rem 0 auto;
+  margin: 0 3rem 0 0;
   width: 20%;
   color: #464646;
   font-size: 1.2rem;
@@ -313,6 +407,54 @@ img {
   display: block;
   font-weight: 400;
   font-style: normal;
+}
+
+.workflow__header {
+  width: 40%;
+  border-bottom: 2px solid #f09027;
+  text-align: right;
+}
+
+.workflow__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  column-gap: 3rem;
+  margin: 2rem 0;
+  padding-left: 6rem;
+}
+
+.workflow__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 2px solid #f09027;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #ebebeb;
+}
+
+.workflow__illust {
+  height: 5rem;
+  width: 5rem;
+  fill: #b5592a;
+  transition: all 0.2s;
+}
+
+.workflow__desc {
+  padding: 0 2rem 1rem 2rem;
+  color: #464646;
+  font-size: 1.3rem;
+  font-family: "Nunito", serif;
+  text-align: center;
+}
+
+.workflow__desc span {
+  display: block;
+  margin: 4rem 0 1rem 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 .container {
@@ -352,26 +494,39 @@ img {
 .influence {
   grid-column: content-start / fill-end;
   display: grid;
-  grid-template-columns: minmax(max-content, 2fr) minmax(max-content, 1fr);
-  justify-items: center;
-  width: 100%;
+  grid-template-columns: minmax(max-content, min-content) 1fr;
+  margin: 6rem 0;
   border-bottom: 3px solid #f09027;
   font-family: "Nunito", sans-serif;
 }
 
 .workflow {
-  grid-column: content-start / content-end;
+  grid-column: fill-start / content-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5rem 0;
+  margin: 5rem 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .project {
   grid-column: fill-start / fill-end;
-}
-
-.contact {
-  grid-column: content-start / content-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .about {
+  grid-column: content-start / content-end;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.contact {
   grid-column: content-start / content-end;
 }
 

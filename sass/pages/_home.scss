@@ -38,26 +38,39 @@
 .influence {
   grid-column: content-start / fill-end;
   display: grid;
-  grid-template-columns: minmax(max-content, 2fr) minmax(max-content, 1fr);
-  justify-items: center;
-  width: 100%;
+  grid-template-columns: minmax(max-content, min-content) 1fr;
+  margin: 6rem 0;
   border-bottom: 3px solid $color-tertiary;
   font-family: "Nunito", sans-serif;
 }
 
 .workflow {
-  grid-column: content-start / content-end;
+  grid-column: fill-start / content-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5rem 0;
+  margin: 5rem 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .project {
   grid-column: fill-start / fill-end;
-}
-
-.contact {
-  grid-column: content-start / content-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .about {
+  grid-column: content-start / content-end;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.contact {
   grid-column: content-start / content-end;
 }
 

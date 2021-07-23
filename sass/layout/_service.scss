@@ -2,12 +2,15 @@
   &__building {
     display: flex;
     align-items: center;
-    gap: 14rem;
+    justify-content: space-between;
+    padding-right: 2rem;
   }
 
   &__header {
     padding-left: 20rem;
     border-bottom: 2px solid $color-tertiary;
+    width: max-content;
+    font-weight: 300;
   }
 
   &__types {
@@ -21,6 +24,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: $color-light-3;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
   }
 
   &__img {
@@ -28,9 +39,15 @@
     height: 5rem;
     margin-bottom: 1rem;
     fill: $color-tertiary;
+    transition: all 0.2s;
+  }
+
+  &__type:hover &__img {
+    fill: $color-secondary;
   }
 
   &__text {
+    color: $color-font-dark;
     font-size: 1.7rem;
   }
 
@@ -40,7 +57,7 @@
   }
 
   &__desc {
-    margin: 0 3rem 0 auto;
+    margin: 0 3rem 0 0;
     width: 20%;
     color: $color-font-grey;
     font-size: 1.2rem;
