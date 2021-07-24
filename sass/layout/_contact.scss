@@ -1,0 +1,164 @@
+.contact {
+  &__header {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    justify-self: start;
+    width: 50%;
+    text-align: right;
+    border-bottom: 3px solid $color-primary;
+    color: $color-primary;
+  }
+
+  &__direct {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    width: 100%;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    row-gap: 2rem;
+    column-gap: 3rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    color: $color-primary;
+    font-size: 1.5rem;
+
+    &--name {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    &--email {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    &--phone {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    &--message {
+      grid-column: 1 / span 3;
+      grid-row: 2 / span 1;
+    }
+
+    &--submit {
+      grid-column: 1 / span 3;
+      grid-row: 3 / span 1;
+      justify-self: center;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: rgba($color-light-3, 0.95);
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 2px;
+    color: $color-font-grey;
+    font-family: inherit;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $color-quartenery;
+      background-color: $color-light-3;
+    }
+
+    &:focus:invalid {
+      border-bottom: 2px solid $color-secondary-dark;
+    }
+
+    &--name {
+    }
+
+    &--email {
+    }
+
+    &--phone {
+    }
+
+    &--message {
+      min-height: 10rem;
+      max-height: 30rem;
+      min-width: 100%;
+      resize: vertical;
+    }
+
+    &--submit {
+      display: inline-block;
+      background-color: transparent;
+      border: 2px solid $color-primary;
+      color: $color-primary;
+      cursor: pointer;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border: 2px solid $color-tertiary;
+        background-color: $color-tertiary;
+        color: $color-font-light;
+      }
+    }
+  }
+
+  &__business {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    list-style: none;
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    padding-left: 5rem;
+    margin: 2rem 0;
+    border-left: 3px solid $color-primary;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  &__link {
+  }
+
+  &__link:hover ~ &__name {
+    color: $color-font-grey;
+  }
+
+  &__logo {
+    width: 3rem;
+    height: 3rem;
+    fill: $color-primary;
+  }
+
+  &__name {
+    &:link,
+    &:visited {
+      color: $color-primary;
+      font-size: 1.4rem;
+      margin: 0 2.5rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-font-grey;
+    }
+  }
+}

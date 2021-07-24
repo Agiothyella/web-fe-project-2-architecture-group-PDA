@@ -12,6 +12,7 @@
   grid-column: fill-start / fill-end;
   position: relative;
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 .nav {
@@ -29,7 +30,7 @@
 .service {
   grid-column: fill-start / content-end;
   width: 100%;
-  padding: 4rem 0 4rem 0;
+  padding: 5rem 0;
   margin: 10rem 0 5rem 0;
   border-top: 3px solid $color-tertiary;
   font-family: "Nunito", sans-serif;
@@ -39,7 +40,7 @@
   grid-column: content-start / fill-end;
   display: grid;
   grid-template-columns: minmax(max-content, min-content) 1fr;
-  margin: 6rem 0;
+  margin: 10rem 0;
   border-bottom: 3px solid $color-tertiary;
   font-family: "Nunito", sans-serif;
 }
@@ -50,7 +51,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 5rem 0;
-  margin: 5rem 0;
+  margin: 2rem 0 5rem 0;
   font-family: "Nunito", sans-serif;
 }
 
@@ -59,19 +60,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 0;
+  margin: 8rem 0 18rem 0;
   font-family: "Nunito", sans-serif;
 }
 
-.about {
-  grid-column: content-start / content-end;
+.founder {
+  grid-column: content-start / fill-end;
   display: flex;
   flex-direction: column;
+  margin: 0 0 4rem auto;
+  padding-top: 4rem;
+  border-top: 3px solid $color-tertiary;
+  font-family: "Nunito", sans-serif;
+}
+
+.company {
+  grid-column: fill-start / content-end;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 6rem auto 8rem 0;
+  overflow: hidden;
   font-family: "Nunito", sans-serif;
 }
 
 .contact {
-  grid-column: content-start / content-end;
+  grid-column: fill-start / fill-end;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  row-gap: 6rem;
+  width: 100%;
+  padding: 4rem 0;
+  margin: 16rem auto 0 0;
+  font-family: "Nunito", sans-serif;
+  background-image: linear-gradient(
+      to top,
+      rgba($color-secondary, 0.8),
+      rgba($color-tertiary, 0.8)
+    ),
+    url("../img/bg-1.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .footer {

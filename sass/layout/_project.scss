@@ -7,16 +7,28 @@
   &__works {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, minmax(0, 30rem));
+    grid-template-rows: repeat(3, minmax(0, 40rem));
     padding: 0 6rem;
+    margin: 3rem 0 3rem 0;
     column-gap: 4rem;
-    row-gap: 6rem;
+    row-gap: 8rem;
   }
 
   &__work {
     display: flex;
     flex-direction: column;
     background-color: $color-light-3;
+    border-bottom: 2px solid $color-light-3;
+    transition: all 0.2s;
+
+    &:hover {
+      border-bottom: 2px solid $color-secondary;
+    }
+  }
+
+  &__link {
+    overflow: hidden;
+    flex: 1 1;
   }
 
   &__picture {
@@ -25,16 +37,79 @@
   }
 
   &__detail {
+    flex: 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem 2rem 1rem;
   }
 
   &__name {
-    text-transform: uppercase;
+    &:link,
+    &:visited {
+      padding-top: 1.2rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid transparent;
+      color: inherit;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      border-bottom: 1px solid $color-tertiary;
+    }
   }
 
   &__type {
-    color: $color-tertiary;
+    &:link,
+    &:visited {
+      color: $color-secondary;
+      text-decoration: none;
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      color: $color-tertiary;
+    }
   }
 
   &__misc {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: minmax(max-content, 20%) 1fr;
+    font-size: 1.2rem;
+    row-gap: 0.5rem;
+  }
+
+  &__btn {
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // width: 100%;
+
+    // &::before {
+    //   content: "";
+    //   flex: 1 1;
+    //   display: block;
+    //   height: 3px;
+    //   width: 100%;
+    //   margin-right: 4rem;
+    //   background-color: $color-secondary;
+    // }
+
+    // &::after {
+    //   content: "";
+    //   flex: 1 1;
+    //   display: block;
+    //   height: 3px;
+    //   width: 100%;
+    //   margin-left: 4rem;
+    //   background-color: $color-secondary;
+    // }
   }
 }
