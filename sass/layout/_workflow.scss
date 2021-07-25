@@ -25,7 +25,8 @@
     background-color: $color-light-3;
     transition: all 0.2s;
 
-    &:hover {
+    &:hover,
+    &:active {
       transform: translateY(-0.5rem);
       border-bottom: 1px solid $color-tertiary;
     }

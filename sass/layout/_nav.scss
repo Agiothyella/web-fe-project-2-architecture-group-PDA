@@ -11,6 +11,10 @@
       visibility: hidden;
       text-decoration: none;
       transition: all 0.4s;
+
+      @media only screen and (max-width: 1200px) {
+        margin-left: 1.5rem;
+      }
     }
 
     &:hover,
@@ -43,6 +47,10 @@
       margin: 0.5rem 1rem;
       font-size: inherit;
       transition: all 0.2s;
+
+      @media only screen and (max-width: 1200px) {
+        margin: 0.5rem 1.5rem;
+      }
     }
 
     &:hover,

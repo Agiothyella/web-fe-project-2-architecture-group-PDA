@@ -12,6 +12,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   background-color: #f0f2eb;
   color: #000;
@@ -544,6 +550,10 @@ img {
   transform: translateY(-2rem);
 }
 
+.influence__wrapper:active .influence__source {
+  transform: translateY(-2rem);
+}
+
 .influence__img {
   width: 140%;
   height: 100%;
@@ -590,6 +600,12 @@ img {
   transition: all 0.4s;
 }
 
+@media only screen and (max-width: 1200px) {
+  .nav__logo:link, .nav__logo:visited {
+    margin-left: 1.5rem;
+  }
+}
+
 .nav__logo:hover, .nav__logo:active {
   color: #f09027;
 }
@@ -616,6 +632,12 @@ img {
   margin: 0.5rem 1rem;
   font-size: inherit;
   transition: all 0.2s;
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav__link:link, .nav__link:visited {
+    margin: 0.5rem 1.5rem;
+  }
 }
 
 .nav__link:hover, .nav__link:active {
@@ -796,7 +818,7 @@ img {
   transition: all 0.2s;
 }
 
-.workflow__step:hover {
+.workflow__step:hover, .workflow__step:active {
   transform: translateY(-0.5rem);
   border-bottom: 1px solid #f09027;
 }
@@ -839,9 +861,15 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 2rem 2rem;
+  padding: 2rem;
   font-family: "Nunito", sans-serif;
   z-index: 10;
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav {
+    padding: 2.3rem 2rem;
+  }
 }
 
 .header {
@@ -932,4 +960,10 @@ img {
   border-top: 2px solid #f09027;
   background-color: #b5592a;
   font-family: "Nunito", sans-serif;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    padding: 2rem 3rem;
+  }
 }

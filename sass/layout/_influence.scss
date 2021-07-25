@@ -40,6 +40,10 @@
     transform: translateY(-2rem);
   }
 
+  &__wrapper:active &__source {
+    transform: translateY(-2rem);
+  }
+
   &__img {
     width: 140%;
     height: 100%;
