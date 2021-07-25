@@ -63,12 +63,12 @@
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     justify-self: start;
-    margin: 4rem 0;
+    align-self: center;
     padding: 3rem;
     width: 90%;
     background-color: $color-light-3;
     color: $color-font-grey;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-align: justify;
   }
 }

@@ -1,8 +1,9 @@
 .service {
   &__building {
-    display: flex;
-    align-items: center;
+    display: grid;
     justify-content: space-between;
+    align-items: center;
+    grid-template-columns: max-content 1fr;
     padding-right: 2rem;
   }
 
@@ -14,10 +15,11 @@
   }
 
   &__types {
-    align-self: flex-start;
+    justify-self: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    column-gap: 5rem;
+    width: max-content;
   }
 
   &__type {
@@ -54,22 +56,5 @@
   &__detail {
     font-size: 1.3rem;
     color: $color-font-grey;
-  }
-
-  &__desc {
-    margin: 0 3rem 0 0;
-    width: 20%;
-    color: $color-font-grey;
-    font-size: 1.2rem;
-    font-weight: 300;
-    font-style: italic;
-    text-align: right;
-
-    span {
-      margin-top: 0.5rem;
-      display: block;
-      font-weight: 400;
-      font-style: normal;
-    }
   }
 }

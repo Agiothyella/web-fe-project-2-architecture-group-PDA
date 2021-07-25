@@ -1,42 +1,3 @@
-.company {
-  &__image {
-    flex: 0 1 30%;
-    height: 25rem;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__us {
-    flex: 1 0 70%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 4rem;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    margin-right: 5rem;
-  }
-
-  &__header {
-    align-self: flex-start;
-    width: 80%;
-    border-bottom: 2px solid $color-tertiary;
-    padding-left: 6rem;
-    text-align: right;
-    line-height: normal;
-  }
-
-  &__text {
-    margin-left: 6rem;
-    padding: 2rem 3rem;
-    background-color: $color-light-3;
-    color: $color-font-grey;
-    text-align: justify;
-  }
-}
-
 .founder {
   &__header {
     align-self: flex-end;
@@ -108,5 +69,44 @@
       grid-column: 2 / span 1;
       grid-row: 2 / span 1;
     }
+  }
+}
+
+.company {
+  &__image {
+    flex: 0 1 30%;
+    height: 25rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__us {
+    flex: 1 0 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    line-height: 2.5rem;
+    margin-right: 5rem;
+  }
+
+  &__header {
+    align-self: flex-start;
+    width: 80%;
+    border-bottom: 2px solid $color-tertiary;
+    padding-left: 6rem;
+    text-align: right;
+    line-height: normal;
+  }
+
+  &__text {
+    margin-left: 6rem;
+    padding: 2rem 3rem;
+    background-color: $color-light-3;
+    color: $color-font-grey;
+    font-size: 1.5rem;
+    text-align: justify;
   }
 }
