@@ -596,6 +596,15 @@ img {
   list-style: none;
   display: flex;
   flex-direction: row;
+  font-size: 1.4rem;
+}
+
+.nav__list--active {
+  font-size: 1.3rem;
+}
+
+.nav__item {
+  font-size: inherit;
 }
 
 .nav__link:link, .nav__link:visited {
@@ -603,7 +612,7 @@ img {
   text-decoration: none;
   padding: 0 0.5rem;
   margin: 0.5rem 1rem;
-  font-size: 1.3rem;
+  font-size: inherit;
   transition: all 0.2s;
 }
 

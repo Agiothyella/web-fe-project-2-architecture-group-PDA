@@ -2,15 +2,18 @@
 
 const nav = document.querySelector(".nav");
 const navLogo = document.querySelector(".nav__logo");
+const navList = document.querySelector(".nav__list");
 
 function showNav() {
   let top = window.pageYOffset || document.documentElement.scrollTop;
   if (top > 1) {
     nav.classList.add("nav-active");
     navLogo.classList.add("u-visible");
+    navList.classList.add("nav__list--active");
   } else {
     nav.classList.remove("nav-active");
     navLogo.classList.remove("u-visible");
+    navList.classList.remove("nav__list--active");
   }
 }
 
