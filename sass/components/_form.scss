@@ -1,0 +1,38 @@
+.input {
+  border: none;
+  background-color: rgba($color-light-3, 0.95);
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $color-quartenery;
+    background-color: $color-light-3;
+  }
+
+  &:focus:invalid {
+    border-bottom: 2px solid $color-secondary-dark;
+  }
+}
+
+.submit {
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    // border: 2px solid $color-tertiary;
+    // background-color: $color-tertiary;
+    // color: $color-font-light;
+    border: 2px solid $color-primary;
+    background-color: $color-primary;
+    color: $color-secondary;
+  }
+}

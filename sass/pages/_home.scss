@@ -8,13 +8,6 @@
   justify-items: center;
 }
 
-.header {
-  grid-column: fill-start / fill-end;
-  position: relative;
-  width: 100%;
-  margin-bottom: 4rem;
-}
-
 .nav {
   display: flex;
   flex-direction: row;
@@ -24,7 +17,16 @@
   width: 100%;
   top: 0;
   left: 0;
+  padding: 2rem 2rem;
   font-family: "Nunito", sans-serif;
+  z-index: 10;
+}
+
+.header {
+  grid-column: fill-start / fill-end;
+  position: relative;
+  width: 100%;
+  margin-bottom: 4rem;
 }
 
 .service {
@@ -60,8 +62,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 8rem 0 18rem 0;
+  margin: 10rem 0 8rem 0;
   font-family: "Nunito", sans-serif;
+}
+
+.contact {
+  grid-column: fill-start / fill-end;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  row-gap: 6rem;
+  width: 100%;
+  padding: 8rem 0;
+  margin: 10rem 0;
+  font-family: "Nunito", sans-serif;
+  background-image: linear-gradient(
+      to top,
+      rgba($color-secondary, 0.8),
+      rgba($color-tertiary, 0.8)
+    ),
+    linear-gradient(to top left, transparent, rgba($color-dark-1, 0.5)),
+    url("../img/bg-1.png");
+  background-size: cover;
+  background-position: bottom;
 }
 
 .founder {
@@ -78,31 +101,19 @@
   grid-column: fill-start / content-end;
   display: flex;
   flex-direction: row-reverse;
-  margin: 6rem auto 8rem 0;
+  margin: 4rem auto 10rem 0;
   overflow: hidden;
   font-family: "Nunito", sans-serif;
 }
 
-.contact {
-  grid-column: fill-start / fill-end;
-  display: grid;
-  grid-template-columns: 1fr max-content;
-  align-items: center;
-  row-gap: 6rem;
-  width: 100%;
-  padding: 4rem 0;
-  margin: 16rem auto 0 0;
-  font-family: "Nunito", sans-serif;
-  background-image: linear-gradient(
-      to top,
-      rgba($color-secondary, 0.8),
-      rgba($color-tertiary, 0.8)
-    ),
-    url("../img/bg-1.png");
-  background-size: cover;
-  background-position: center;
-}
-
 .footer {
   grid-column: fill-start / fill-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 6rem;
+  border-top: 2px solid $color-tertiary;
+  background-color: $color-secondary;
+  font-family: "Nunito", sans-serif;
 }

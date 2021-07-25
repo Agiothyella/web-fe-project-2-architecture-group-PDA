@@ -10,7 +10,7 @@
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
     column-gap: 3rem;
-    margin: 4rem 0;
+    margin: 5rem 0 3rem 0;
     padding-left: 6rem;
   }
 
@@ -27,6 +27,7 @@
 
     &:hover {
       transform: translateY(-0.5rem);
+      border-bottom: 1px solid $color-tertiary;
     }
   }
 

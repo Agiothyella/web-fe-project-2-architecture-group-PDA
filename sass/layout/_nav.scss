@@ -1,0 +1,49 @@
+.nav {
+  border-bottom: 1px solid transparent;
+  transition: border 0.2s;
+
+  &__logo {
+    &:link,
+    &:visited {
+      color: $color-secondary-dark;
+      font-size: 1.6rem;
+      opacity: 0;
+      visibility: hidden;
+      text-decoration: none;
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-tertiary;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-secondary-dark;
+      text-decoration: none;
+      padding: 0 0.5rem;
+      margin: 0.5rem 1rem;
+      font-size: 1.3rem;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-tertiary;
+    }
+  }
+}
+
+.nav-active {
+  background-color: $color-primary;
+  border-bottom: 1px solid $color-secondary;
+}

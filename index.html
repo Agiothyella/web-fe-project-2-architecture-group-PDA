@@ -19,25 +19,25 @@
   </head>
   <body class="container">
     <nav class="nav">
-      <div class="nav__logo">Agiothyella Architecture Group</div>
+      <a href="#" class="nav__logo">Agiothyella Architecture Group</a>
       <ul class="nav__list">
-        <li class="nav__items">
-          <a href="#" class="nav__links">Home</a>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Home</a>
         </li>
-        <li class="nav__items">
-          <a href="#" class="nav__links">Studio</a>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Studio</a>
         </li>
-        <li class="nav__items">
-          <a href="#" class="nav__links">Clients</a>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Clients</a>
         </li>
-        <li class="nav__items">
-          <a href="#" class="nav__links">Projects</a>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Projects</a>
         </li>
-        <li class="nav__items">
-          <a href="#" class="nav__links">Blog</a>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Blog</a>
         </li>
-        <li class="nav__items">
-          <a href="#" class="nav__links">Contact Us</a>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Contact Us</a>
         </li>
       </ul>
     </nav>
@@ -407,6 +407,95 @@
       </div>
     </section>
 
+    <section class="contact">
+      <h3 class="contact__header t-header-3">Come Have a Chat With Us</h3>
+      <form class="contact__direct">
+        <div class="contact__container">
+          <div class="contact__group contact__group--name">
+            <label for="contact__input--name">Name</label>
+            <input
+              type="text"
+              id="contact__input--name"
+              class="input contact__input contact__input--name"
+              required
+            />
+          </div>
+          <div class="contact__group contact__group--email">
+            <label for="contact__input--email">Email</label>
+            <input
+              type="email"
+              id="contact__input--email"
+              class="input contact__input contact__input--email"
+              required
+            />
+          </div>
+          <div class="contact__group contact__group--phone">
+            <label for="contact__input--phone">Phone</label>
+            <input
+              type="tel"
+              id="contact__input--phone"
+              class="input contact__input contact__input--phone"
+              required
+            />
+          </div>
+          <div class="contact__group contact__group--message">
+            <label for="contact__input--message">Message</label>
+            <textarea
+              name="contact__input--message"
+              cols="30"
+              rows="10"
+              id="contact__input--message"
+              class="input contact__input contact__input--message"
+              required
+            ></textarea>
+          </div>
+          <div class="contact__group contact__group--submit">
+            <input
+              type="submit"
+              value="Send Message"
+              class="submit contact__input contact__input--submit"
+            />
+          </div>
+        </div>
+      </form>
+      <ul class="contact__business">
+        <li class="contact__items">
+          <a href="#" class="contact__link">
+            <svg class="contact__logo">
+              <use
+                xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-envelop"
+              ></use></svg></a
+          ><a href="#" class="contact__name">agiothyella@gmail.com</a>
+        </li>
+        <li class="contact__items">
+          <a href="#" class="contact__link">
+            <svg class="contact__logo">
+              <use
+                xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-phone"
+              ></use></svg></a
+          ><a href="#" class="contact__name"> +62 821-3092-9268</a>
+        </li>
+        <li class="contact__items">
+          <a href="#" class="contact__link">
+            <svg class="contact__logo">
+              <use
+                xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-location"
+              ></use></svg></a
+          ><a href="#" class="contact__name">
+            Cibeunying Landeuh 71/144F, Bandung 40123, Indonesia</a
+          >
+        </li>
+        <li class="contact__items">
+          <a href="#" class="contact__link">
+            <svg class="contact__logo">
+              <use
+                xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-linkedin"
+              ></use></svg></a
+          ><a href="#" class="contact__name">Agiothyella Architecture Group</a>
+        </li>
+      </ul>
+    </section>
+
     <section class="founder">
       <h3 class="founder__header t-header-3">Founder</h3>
       <div class="founder__container">
@@ -462,111 +551,16 @@
       </div>
     </section>
 
-    <section class="contact">
-      <h3 class="contact__header t-header-3">Come Have a Chat With Us</h3>
-      <form class="contact__direct">
-        <div class="contact__container">
-          <div class="contact__group contact__group--name">
-            <label for="contact__input--name">Name</label>
-            <input
-              type="text"
-              id="contact__input--name"
-              class="contact__input contact__input--name"
-              required
-            />
-          </div>
-          <div class="contact__group contact__group--email">
-            <label for="contact__input--email">Email</label>
-            <input
-              type="email"
-              id="contact__input--email"
-              class="contact__input contact__input--email"
-              required
-            />
-          </div>
-          <div class="contact__group contact__group--phone">
-            <label for="contact__input--phone">Phone</label>
-            <input
-              type="tel"
-              id="contact__input--phone"
-              class="contact__input contact__input--phone"
-              required
-            />
-          </div>
-          <div class="contact__group contact__group--message">
-            <label for="contact__input--message">Message</label>
-            <textarea
-              name="contact__input--message"
-              cols="30"
-              rows="10"
-              id="contact__input--message"
-              class="contact__input contact__input--message"
-              required
-            ></textarea>
-          </div>
-          <div class="contact__group contact__group--submit">
-            <input
-              type="submit"
-              value="Send Message"
-              class="contact__input contact__input--submit"
-            />
-          </div>
-        </div>
-      </form>
-      <ul class="contact__business">
-        <li class="contact__items">
-          <a href="#" class="contact__link">
-            <svg class="contact__logo">
-              <use
-                xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-envelop"
-              ></use></svg></a
-          ><a href="#" class="contact__name">agiothyella@gmail.com</a>
-        </li>
-        <li class="contact__items">
-          <a href="#" class="contact__link">
-            <svg class="contact__logo">
-              <use
-                xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-phone"
-              ></use></svg></a
-          ><a href="#" class="contact__name"> +62 821-3092-9268</a>
-        </li>
-        <li class="contact__items">
-          <a href="#" class="contact__link">
-            <svg class="contact__logo">
-              <use
-                xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-location"
-              ></use></svg></a
-          ><a href="#" class="contact__name">
-            Cibeunying Landeuh 71/144F, Bandung 40123, Indonesia</a
-          >
-        </li>
-        <li class="contact__items">
-          <a href="#" class="contact__link">
-            <svg class="contact__logo">
-              <use
-                xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-linkedin"
-              ></use></svg></a
-          ><a href="#" class="contact__name">Agiothyella Architecture Group</a>
-        </li>
-      </ul>
-    </section>
-
     <footer class="footer">
       <div class="footer__copyright">
         Copyright&copy; 2021 Agiothyella Architecture
       </div>
       <ul class="footer__nav">
         <li class="footer__items">
-          <a href="#" class="footer__link">Company</a>
-        </li>
-        <li class="footer__items">
           <a href="#" class="footer__link">Terms</a>
         </li>
         <li class="footer__items">
           <a href="#" class="footer__link">Policy</a>
-        </li>
-        <li class="footer__items">
-          <a href="#" class="footer__link">Contact</a>
         </li>
         <li class="footer__items">
           <a href="#" class="footer__link">Planner</a>

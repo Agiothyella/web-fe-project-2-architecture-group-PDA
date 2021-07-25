@@ -17,11 +17,14 @@
   &__work {
     display: flex;
     flex-direction: column;
+    padding-top: 2px;
     background-color: $color-light-3;
+    border-top: 2px solid transparent;
     border-bottom: 2px solid $color-light-3;
     transition: all 0.2s;
 
     &:hover {
+      border-top: 2px solid $color-secondary;
       border-bottom: 2px solid $color-secondary;
     }
   }

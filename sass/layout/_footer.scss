@@ -1,0 +1,29 @@
+.footer {
+  &__copyright {
+    color: $color-font-light;
+    font-size: 1.2rem;
+  }
+
+  &__nav {
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      border-bottom: 2px solid transparent;
+      color: $color-font-light;
+      text-decoration: none;
+      margin: 0.5rem 1.5rem;
+      font-size: 1.3rem;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      border-bottom: 2px solid $color-primary;
+    }
+  }
+}
