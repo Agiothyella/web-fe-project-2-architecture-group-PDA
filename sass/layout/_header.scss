@@ -57,6 +57,11 @@
     left: 0;
     width: 5%;
     margin: 0 0 0.8rem 0;
+
+    @media only screen and (min-width: $bp-infinite) {
+      align-items: flex-end;
+      padding-right: 2rem;
+    }
   }
 
   &__link:link,

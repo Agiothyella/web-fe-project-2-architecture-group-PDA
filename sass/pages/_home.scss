@@ -22,7 +22,7 @@
   z-index: 10;
 
   @media only screen and (max-width: 1200px) {
-    padding: 2.3rem 2rem;
+    padding: 2.35rem 2rem;
   }
 }
 
@@ -46,6 +46,7 @@
   grid-column: content-start / fill-end;
   display: grid;
   grid-template-columns: minmax(max-content, min-content) 1fr;
+  width: 100%;
   margin: 10rem 0;
   border-bottom: 3px solid $color-tertiary;
   font-family: "Nunito", sans-serif;
@@ -56,6 +57,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   padding: 5rem 0;
   margin: 2rem 0 5rem 0;
   font-family: "Nunito", sans-serif;
@@ -95,9 +97,11 @@
   grid-column: content-start / fill-end;
   display: flex;
   flex-direction: column;
-  margin: 0 0 4rem auto;
+  width: 100%;
+  margin: 0 0 10rem auto;
   padding-top: 2rem;
   border-top: 3px solid $color-tertiary;
+  overflow: hidden;
   font-family: "Nunito", sans-serif;
 }
 
@@ -105,7 +109,8 @@
   grid-column: fill-start / content-end;
   display: flex;
   flex-direction: row-reverse;
-  margin: 4rem auto 10rem 0;
+  width: 100%;
+  margin: 8rem 0 10rem -15rem;
   overflow: hidden;
   font-family: "Nunito", sans-serif;
 }

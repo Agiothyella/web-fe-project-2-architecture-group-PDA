@@ -165,18 +165,17 @@ img {
 .founder__header {
   align-self: flex-end;
   border-bottom: 2px solid #f09027;
-  width: 55%;
-  margin-top: 2rem;
+  width: 100%;
+  margin: 2rem -65rem 0 0;
 }
 
 .founder__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: end;
   column-gap: 5rem;
   row-gap: 2rem;
-  margin: 6rem 0;
-  padding-right: 14rem;
+  max-width: 100rem;
+  margin: 6rem 0 0 25rem;
 }
 
 .founder__person {
@@ -235,7 +234,7 @@ img {
 }
 
 .company__image {
-  flex: 0 1 30%;
+  flex: 0 1 40rem;
   height: 25rem;
 }
 
@@ -254,17 +253,19 @@ img {
 }
 
 .company__header {
-  align-self: flex-start;
-  width: 80%;
+  width: 100%;
   border-bottom: 2px solid #f09027;
   padding-left: 6rem;
+  margin-left: -15rem;
   text-align: right;
   line-height: normal;
 }
 
 .company__text {
-  margin-left: 6rem;
+  align-self: flex-end;
+  max-width: 65rem;
   padding: 2rem 3rem;
+  margin-right: 3rem;
   background-color: #ebebeb;
   color: #464646;
   font-size: 1.5rem;
@@ -472,6 +473,13 @@ img {
   margin: 0 0 0.8rem 0;
 }
 
+@media only screen and (min-width: 112.5em) {
+  .header__social {
+    align-items: flex-end;
+    padding-right: 2rem;
+  }
+}
+
 .header__link:link, .header__link:visited {
   fill: #b5592a;
   transition: all 0.1s;
@@ -573,13 +581,17 @@ img {
   text-align: center;
 }
 
-.influence__text {
+.influence__text-container {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
   justify-self: start;
   align-self: center;
-  padding: 3rem;
   width: 90%;
+}
+
+.influence__text {
+  max-width: 44rem;
+  padding: 2rem 4rem;
   background-color: #ebebeb;
   color: #464646;
   font-size: 1.5rem;
@@ -657,7 +669,7 @@ img {
 .project__works {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, minmax(0, 40rem));
+  grid-template-rows: repeat(3, max-content);
   padding: 0 6rem;
   margin: 3rem 0 3rem 0;
   column-gap: 4rem;
@@ -665,8 +677,8 @@ img {
 }
 
 .project__work {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 16vw max-content;
   padding-top: 2px;
   background-color: #ebebeb;
   border-top: 2px solid transparent;
@@ -680,8 +692,8 @@ img {
 }
 
 .project__link {
-  overflow: hidden;
-  flex: 1 1;
+  width: 100%;
+  height: 100%;
 }
 
 .project__picture {
@@ -690,7 +702,6 @@ img {
 }
 
 .project__detail {
-  flex: 0 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -737,15 +748,15 @@ img {
   display: grid;
   justify-content: space-between;
   align-items: center;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 1fr max-content;
   padding-right: 2rem;
 }
 
 .service__header {
-  padding-left: 20rem;
   border-bottom: 2px solid #f09027;
-  width: max-content;
   font-weight: 300;
+  width: 100%;
+  text-align: right;
 }
 
 .service__types {
@@ -754,6 +765,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 5rem;
   width: max-content;
+  margin: 0 15rem;
 }
 
 .service__type {
@@ -792,17 +804,20 @@ img {
 }
 
 .workflow__header {
-  width: 40%;
+  width: 100%;
+  margin-left: -80rem;
   border-bottom: 2px solid #f09027;
   text-align: right;
 }
 
 .workflow__grid {
+  align-self: flex-end;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
+  max-width: 135rem;
   column-gap: 3rem;
-  margin: 5rem 0 3rem 0;
+  margin: 5rem 0 3rem auto;
   padding-left: 6rem;
 }
 
@@ -868,7 +883,7 @@ img {
 
 @media only screen and (max-width: 1200px) {
   .nav {
-    padding: 2.3rem 2rem;
+    padding: 2.35rem 2rem;
   }
 }
 
@@ -892,6 +907,7 @@ img {
   grid-column: content-start / fill-end;
   display: grid;
   grid-template-columns: minmax(max-content, min-content) 1fr;
+  width: 100%;
   margin: 10rem 0;
   border-bottom: 3px solid #f09027;
   font-family: "Nunito", sans-serif;
@@ -902,6 +918,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   padding: 5rem 0;
   margin: 2rem 0 5rem 0;
   font-family: "Nunito", sans-serif;
@@ -935,9 +952,11 @@ img {
   grid-column: content-start / fill-end;
   display: flex;
   flex-direction: column;
-  margin: 0 0 4rem auto;
+  width: 100%;
+  margin: 0 0 10rem auto;
   padding-top: 2rem;
   border-top: 3px solid #f09027;
+  overflow: hidden;
   font-family: "Nunito", sans-serif;
 }
 
@@ -945,7 +964,8 @@ img {
   grid-column: fill-start / content-end;
   display: flex;
   flex-direction: row-reverse;
-  margin: 4rem auto 10rem 0;
+  width: 100%;
+  margin: 8rem 0 10rem -15rem;
   overflow: hidden;
   font-family: "Nunito", sans-serif;
 }
