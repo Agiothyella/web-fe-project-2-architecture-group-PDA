@@ -1,9 +1,12 @@
 .workflow {
   &__header {
-    width: 100%;
-    margin-left: -80rem;
+    width: 40%;
     border-bottom: 2px solid $color-tertiary;
     text-align: right;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 80%;
+    }
   }
 
   &__grid {
@@ -13,8 +16,17 @@
     width: 100%;
     max-width: 135rem;
     column-gap: 3rem;
-    margin: 5rem 0 3rem auto;
+    margin: 5rem 0 3rem 0;
     padding-left: 6rem;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 0 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 5rem;
+    }
   }
 
   &__step {

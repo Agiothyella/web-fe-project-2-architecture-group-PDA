@@ -7,11 +7,14 @@
   &__works {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, max-content);
     padding: 0 6rem;
     margin: 3rem 0 3rem 0;
     column-gap: 4rem;
     row-gap: 8rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__work {
@@ -26,6 +29,16 @@
     &:hover {
       border-top: 2px solid $color-secondary;
       border-bottom: 2px solid $color-secondary;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-rows: 20vw max-content;
+    }
+
+    &--9 {
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
     }
   }
 
@@ -86,32 +99,9 @@
     grid-template-columns: minmax(max-content, 20%) 1fr;
     font-size: 1.2rem;
     row-gap: 0.5rem;
-  }
 
-  &__btn {
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    // width: 100%;
-
-    // &::before {
-    //   content: "";
-    //   flex: 1 1;
-    //   display: block;
-    //   height: 3px;
-    //   width: 100%;
-    //   margin-right: 4rem;
-    //   background-color: $color-secondary;
-    // }
-
-    // &::after {
-    //   content: "";
-    //   flex: 1 1;
-    //   display: block;
-    //   height: 3px;
-    //   width: 100%;
-    //   margin-left: 4rem;
-    //   background-color: $color-secondary;
-    // }
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: minmax(max-content, 25%) 1fr;
+    }
   }
 }

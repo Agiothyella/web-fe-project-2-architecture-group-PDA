@@ -2,8 +2,12 @@
   &__header {
     align-self: flex-end;
     border-bottom: 2px solid $color-tertiary;
-    width: 100%;
-    margin: 2rem -65rem 0 0;
+    width: 52%;
+    margin: 2rem 0 0 0;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 80%;
+    }
   }
 
   &__container {
@@ -11,8 +15,16 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5rem;
     row-gap: 2rem;
-    max-width: 100rem;
-    margin: 6rem 0 0 25rem;
+    max-width: 110rem;
+    margin: 6rem 0 0 10rem;
+
+    @media only screen and (max-width: $bp-large) {
+      margin: 6rem 4rem 0 10rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 6rem 4rem 0 4rem;
+    }
   }
 
   &__person {
@@ -76,6 +88,14 @@
     flex: 0 1 40rem;
     height: 25rem;
 
+    @media only screen and (max-width: $bp-large) {
+      align-self: flex-end;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      align-self: center;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -88,7 +108,15 @@
     flex-direction: column;
     row-gap: 4rem;
     line-height: 2.5rem;
-    margin-right: 5rem;
+    margin: 0 5rem;
+
+    @media only screen and (max-width: $bp-large) {
+      flex: 1 0 65%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0 2rem;
+    }
   }
 
   &__header {
@@ -100,11 +128,14 @@
     line-height: normal;
   }
 
-  &__text {
-    align-self: flex-end;
-    max-width: 65rem;
-    padding: 2rem 3rem;
+  &__text-container {
+    max-width: 73rem;
     margin-right: 3rem;
+    align-self: flex-end;
+  }
+
+  &__text {
+    padding: 2rem 3rem;
     background-color: $color-light-3;
     color: $color-font-grey;
     font-size: 1.5rem;
