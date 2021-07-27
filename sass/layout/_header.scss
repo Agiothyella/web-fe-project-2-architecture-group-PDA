@@ -15,13 +15,17 @@
   &__texts {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
     height: 100%;
     color: $color-font-light;
     font-family: "Raleway", sans-serif;
     z-index: 0;
+
+    @media only screen and (max-width: $bp-smallest) {
+      align-items: stretch;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -37,6 +41,13 @@
     @media only screen and (max-width: $bp-medium) {
       font-size: 5rem;
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+      line-height: normal;
+      padding: 1rem 1rem 3rem 1rem;
+      margin-top: 7rem !important;
+      font-size: 4.4rem;
+    }
   }
 
   &__subtitle {
@@ -47,6 +58,12 @@
 
     @media only screen and (max-width: $bp-large) {
       font-size: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      align-self: flex-end;
+      margin-top: -2rem;
+      font-size: 2rem;
     }
   }
 
@@ -88,9 +105,9 @@
     }
 
     @media only screen and (max-width: $bp-medium) {
-      flex-direction: row;
+      flex-direction: row-reverse;
       left: auto;
-      right: 8%;
+      right: 3%;
       margin: 0 0 -4rem 0;
     }
   }

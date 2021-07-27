@@ -24,15 +24,4 @@
   border: 2px solid $color-primary;
   cursor: pointer;
   transition: all 0.2s;
-
-  &:hover,
-  &:active,
-  &:focus {
-    // border: 2px solid $color-tertiary;
-    // background-color: $color-tertiary;
-    // color: $color-font-light;
-    border: 2px solid $color-primary;
-    background-color: $color-primary;
-    color: $color-secondary;
-  }
 }

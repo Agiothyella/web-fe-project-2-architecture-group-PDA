@@ -7,6 +7,13 @@
     text-align: right;
     border-bottom: 3px solid $color-primary;
     color: $color-primary;
+
+    @media only screen and (max-width: $bp-smallest) {
+      justify-self: center;
+      width: 90%;
+      font-size: 2.8rem;
+      text-align: center;
+    }
   }
 
   &__direct {
@@ -96,6 +103,20 @@
     &--submit {
       display: inline-block;
       color: $color-primary;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border: 2px solid $color-primary;
+        background-color: $color-primary;
+        color: $color-secondary;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        border: 2px solid $color-primary;
+        background-color: $color-primary;
+        color: $color-secondary;
+      }
     }
   }
 
@@ -117,6 +138,12 @@
       grid-template-columns: repeat(2, 1fr);
       border-left: none;
       padding-left: 0;
+    }
+
+    @media only screen and (max-width: $bp-contact-founder-break) {
+      grid-template-columns: 1fr;
+      justify-self: center;
+      margin-top: 5rem;
     }
   }
 

@@ -15,6 +15,12 @@
     @media only screen and (max-width: $bp-medium) {
       width: 90%;
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+      justify-self: center;
+      width: 80%;
+      text-align: center;
+    }
   }
 
   &__from {
@@ -30,6 +36,17 @@
       grid-column: 1 / span 1;
       grid-row: 3 / span 1;
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 100%;
+      padding: 0 2rem;
+    }
+
+    @media only screen and (max-width: $bp-influence-workflow-break) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 60vw);
+      row-gap: 2rem;
+    }
   }
 
   &__source {
@@ -44,24 +61,45 @@
 
   &__wrapper {
     transform: skewX(-10deg) translate3d(0, 0, 0);
+
+    @media only screen and (max-width: $bp-smallest) {
+      transform: skewX(0) translate3d(0, 0, 0);
+    }
   }
 
   &__source:hover {
     transform: translateY(-2rem);
+
+    @media only screen and (max-width: $bp-influence-workflow-break) {
+      transform: translateY(0);
+    }
   }
 
   &__wrapper:hover &__source {
     transform: translateY(-2rem);
+
+    @media only screen and (max-width: $bp-influence-workflow-break) {
+      transform: translateY(0);
+    }
   }
 
   &__wrapper:active &__source {
     transform: translateY(-2rem);
+
+    @media only screen and (max-width: $bp-influence-workflow-break) {
+      transform: translateY(0);
+    }
   }
 
   &__img {
     width: 140%;
     height: 100%;
     transform: translateX(-15%) skewX(10deg);
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 100%;
+      transform: translateX(0) skewX(0);
+    }
   }
 
   &__caption {
@@ -75,6 +113,10 @@
     color: $color-font-light;
     font-size: 2rem;
     text-align: center;
+
+    @media only screen and (max-width: $bp-influence-workflow-break) {
+      padding: 1rem;
+    }
   }
 
   &__text-container {
@@ -95,6 +137,13 @@
 
     @media only screen and (max-width: $bp-medium) {
       justify-self: center;
+      margin: 5rem 0;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 2rem;
       margin: 5rem 0;
     }
   }

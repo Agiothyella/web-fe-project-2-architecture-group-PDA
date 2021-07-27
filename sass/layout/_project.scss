@@ -2,6 +2,11 @@
   &__header {
     border-bottom: 2px solid $color-tertiary;
     text-align: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 80%;
+      align-self: center;
+    }
   }
 
   &__works {
@@ -14,6 +19,11 @@
 
     @media only screen and (max-width: $bp-medium) {
       grid-template-columns: repeat(2, 1fr);
+      padding: 0 2rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -32,7 +42,23 @@
     }
 
     @media only screen and (max-width: $bp-medium) {
-      grid-template-rows: 20vw max-content;
+      grid-template-rows: 25vw max-content;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-rows: 50vw max-content;
+    }
+
+    &--7 {
+      @media only screen and (max-width: $bp-smallest) {
+        display: none;
+      }
+    }
+
+    &--8 {
+      @media only screen and (max-width: $bp-smallest) {
+        display: none;
+      }
     }
 
     &--9 {
@@ -102,6 +128,12 @@
 
     @media only screen and (max-width: $bp-large) {
       grid-template-columns: minmax(max-content, 25%) 1fr;
+    }
+  }
+
+  &__btn {
+    @media only screen and (max-width: $bp-smallest) {
+      padding-top: 2rem;
     }
   }
 }

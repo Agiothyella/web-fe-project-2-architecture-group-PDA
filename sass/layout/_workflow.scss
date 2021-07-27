@@ -7,6 +7,11 @@
     @media only screen and (max-width: $bp-large) {
       width: 80%;
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+      align-self: center;
+      text-align: center;
+    }
   }
 
   &__grid {
@@ -26,6 +31,15 @@
     @media only screen and (max-width: $bp-medium) {
       grid-template-columns: repeat(2, 1fr);
       row-gap: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 2rem 0;
+    }
+
+    @media only screen and (max-width: $bp-influence-workflow-break) {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
     }
   }
 

@@ -1,20 +1,30 @@
 `use strict`;
 
 const nav = document.querySelector(".nav");
-const navLogo = document.querySelector(".nav__logo");
+const navLogo = document.querySelectorAll(".nav__logo");
 const navList = document.querySelector(".nav__list");
 
 function showNav() {
   let top = window.pageYOffset || document.documentElement.scrollTop;
   if (top > 1) {
     nav.classList.add("nav-active");
-    navLogo.classList.add("u-visible");
     navList.classList.add("nav__list--active");
+
+    for (i = 0; i < navLogo.length; i++) {
+      navLogo[i].classList.add("u-visible");
+    }
   } else {
     nav.classList.remove("nav-active");
-    navLogo.classList.remove("u-visible");
     navList.classList.remove("nav__list--active");
+
+    for (i = 0; i < navLogo.length; i++) {
+      navLogo[i].classList.remove("u-visible");
+    }
   }
+}
+
+function showNavSmall() {
+  console.log("clicked");
 }
 
 window.onscroll = function () {
