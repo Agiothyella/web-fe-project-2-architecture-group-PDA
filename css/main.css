@@ -707,7 +707,7 @@ img {
 @media only screen and (max-width: 37.5em) {
   .header__title {
     line-height: normal;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 2rem 1rem 3rem 1rem;
     margin-top: 7rem !important;
     font-size: 4.4rem;
   }
@@ -1019,7 +1019,7 @@ img {
 
 .nav {
   border-bottom: 1px solid transparent;
-  transition: border 0.2s;
+  transition: border 0.2s, background-color 0.1s;
 }
 
 .nav__logo:link, .nav__logo:visited {
@@ -1093,6 +1093,7 @@ img {
   text-decoration: none;
   padding: 0 0.5rem;
   margin: 0.5rem 1rem;
+  background-color: #f0f2eb;
   font-size: inherit;
   transition: all 0.2s;
 }
@@ -1118,9 +1119,10 @@ img {
   font-size: 3.5rem;
   padding: 0 2rem;
   margin: 1rem;
+  background-color: #f0f2eb;
   cursor: pointer;
-  letter-spacing: 0;
   color: #464646;
+  letter-spacing: 0;
   font-family: "Barlow", sans-serif;
   transition: all 0.2s;
 }
@@ -1133,6 +1135,67 @@ img {
   .nav__btn {
     display: block;
   }
+}
+
+.nav-small {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  display: none;
+  flex-direction: column-reverse;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f2eb;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.2s;
+  z-index: 11;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav-small {
+    display: flex;
+  }
+}
+
+.nav-small__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.nav-small__item {
+  margin: 1rem 0;
+  background-color: #ebebeb;
+  text-align: center;
+}
+
+.nav-small__link:link, .nav-small__link:visited {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  color: #464646;
+  font-size: 4vh;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-small__link:hover, .nav-small__link:active {
+  color: #000;
+}
+
+.nav-small__btn {
+  align-self: flex-end;
+  padding: 0 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  font-size: 4rem;
+}
+
+.nav-small-active {
+  left: 0;
 }
 
 .nav-active {

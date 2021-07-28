@@ -1,8 +1,10 @@
 `use strict`;
 
 const nav = document.querySelector(".nav");
+const navSmall = document.querySelector(".nav-small");
 const navLogo = document.querySelectorAll(".nav__logo");
 const navList = document.querySelector(".nav__list");
+const navSmallItem = document.querySelectorAll(".nav-small__link");
 
 function showNav() {
   let top = window.pageYOffset || document.documentElement.scrollTop;
@@ -24,7 +26,13 @@ function showNav() {
 }
 
 function showNavSmall() {
-  console.log("clicked");
+  navSmall.classList.toggle("nav-small-active");
+}
+
+function addNavSmallItem() {
+  for (i = 0; i < navSmallItem.length; i++) {
+    navSmallItem[i].addEventListener("click", showNavSmall);
+  }
 }
 
 window.onscroll = function () {
@@ -51,3 +59,4 @@ function showSlidesHead() {
 }
 
 showSlidesHead();
+addNavSmallItem();

@@ -1,6 +1,6 @@
 .nav {
   border-bottom: 1px solid transparent;
-  transition: border 0.2s;
+  transition: border 0.2s, background-color 0.1s;
 
   &__logo {
     &:link,
@@ -71,6 +71,7 @@
       text-decoration: none;
       padding: 0 0.5rem;
       margin: 0.5rem 1rem;
+      background-color: $color-primary;
       font-size: inherit;
       transition: all 0.2s;
 
@@ -94,9 +95,10 @@
     font-size: 3.5rem;
     padding: 0 2rem;
     margin: 1rem;
+    background-color: $color-primary;
     cursor: pointer;
-    letter-spacing: 0;
     color: $color-font-grey;
+    letter-spacing: 0;
     font-family: "Barlow", sans-serif;
     transition: all 0.2s;
 
@@ -108,6 +110,69 @@
       display: block;
     }
   }
+}
+
+.nav-small {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  display: none;
+  flex-direction: column-reverse;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $color-primary;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.2s;
+  z-index: 11;
+
+  @media only screen and (max-width: $bp-smallest) {
+    display: flex;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__item {
+    margin: 1rem 0;
+    background-color: $color-light-3;
+    text-align: center;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      width: 100%;
+      padding: 0.5rem 2rem;
+      color: $color-font-grey;
+      font-size: 4vh;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-font-dark;
+    }
+  }
+
+  &__btn {
+    align-self: flex-end;
+    padding: 0 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 4rem;
+  }
+}
+
+.nav-small-active {
+  left: 0;
 }
 
 .nav-active {
