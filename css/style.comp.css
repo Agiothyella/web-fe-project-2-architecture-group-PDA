@@ -8,7 +8,8 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
   @media only screen and (max-width: 1200px) {
     html {
       font-size: 50%; } }
@@ -122,6 +123,12 @@ img {
   cursor: pointer;
   transition: all 0.2s; }
 
+.founder__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  opacity: 0; }
+
 .founder__header {
   align-self: flex-end;
   border-bottom: 2px solid #f09027;
@@ -232,6 +239,17 @@ img {
         grid-column: 1 / span 1;
         grid-row: 4 / span 1; } }
 
+.company__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .company__wrapper {
+      flex-direction: column-reverse;
+      row-gap: 2rem; } }
+
 .company__us {
   flex: 1 0 70%;
   display: flex;
@@ -300,6 +318,20 @@ img {
   color: #464646;
   font-size: 1.5rem;
   text-align: justify; }
+
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  row-gap: 6rem;
+  width: 100%;
+  opacity: 0; }
+  @media only screen and (max-width: 62.5em) {
+    .contact__wrapper {
+      grid-template-columns: 3fr 1fr; } }
+  @media only screen and (max-width: 53.125em) {
+    .contact__wrapper {
+      grid-template-columns: 1fr; } }
 
 .contact__header {
   grid-column: 1 / span 2;
@@ -592,6 +624,19 @@ img {
   width: 100%;
   height: 100%; }
 
+.influence__wrapper {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  width: 100%;
+  border-bottom: 3px solid #f09027;
+  opacity: 0; }
+  @media only screen and (max-width: 75em) {
+    .influence__wrapper {
+      grid-template-columns: 1fr; } }
+  @media only screen and (max-width: 37.5em) {
+    .influence__wrapper {
+      border-bottom: none; } }
+
 .influence__header {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
@@ -643,10 +688,10 @@ img {
   overflow: hidden;
   transition: all 0.2s; }
 
-.influence__wrapper {
+.influence__card {
   transform: skewX(-10deg) translate3d(0, 0, 0); }
   @media only screen and (max-width: 37.5em) {
-    .influence__wrapper {
+    .influence__card {
       transform: skewX(0) translate3d(0, 0, 0); } }
 
 .influence__source:hover {
@@ -655,16 +700,16 @@ img {
     .influence__source:hover {
       transform: translateY(0); } }
 
-.influence__wrapper:hover .influence__source {
+.influence__card:hover .influence__source {
   transform: translateY(-2rem); }
   @media only screen and (max-width: 29.6875em) {
-    .influence__wrapper:hover .influence__source {
+    .influence__card:hover .influence__source {
       transform: translateY(0); } }
 
-.influence__wrapper:active .influence__source {
+.influence__card:active .influence__source {
   transform: translateY(-2rem); }
   @media only screen and (max-width: 29.6875em) {
-    .influence__wrapper:active .influence__source {
+    .influence__card:active .influence__source {
       transform: translateY(0); } }
 
 .influence__img {
@@ -725,7 +770,7 @@ img {
 
 .nav {
   border-bottom: 1px solid transparent;
-  transition: border 0.2s, background-color 0.1s; }
+  transition: border 0.2s; }
   .nav__logo:link, .nav__logo:visited {
     color: #70371a;
     font-size: 1.6rem;
@@ -949,14 +994,15 @@ img {
   .project__btn {
     padding-top: 2rem; } }
 
-.service__building {
+.service__wrapper {
   display: grid;
   justify-content: space-between;
   align-items: center;
   grid-template-columns: 1fr max-content;
-  padding-right: 2rem; }
+  padding-right: 2rem;
+  opacity: 0; }
   @media only screen and (max-width: 37.5em) {
-    .service__building {
+    .service__wrapper {
       grid-template-columns: 1fr;
       padding-right: 0; } }
 
@@ -1031,6 +1077,9 @@ img {
   font-size: 1.3rem;
   color: #464646;
   text-align: center; }
+
+.workflow__wrapper {
+  opacity: 0; }
 
 .workflow__header {
   width: 40%;
@@ -1145,24 +1194,15 @@ img {
 
 .influence {
   grid-column: content-start / fill-end;
-  display: grid;
-  grid-template-columns: minmax(max-content, min-content) 1fr;
   width: 100%;
   margin: 10rem 0;
-  border-bottom: 3px solid #f09027;
   font-family: "Nunito", sans-serif; }
-  @media only screen and (max-width: 75em) {
-    .influence {
-      grid-template-columns: 1fr; } }
   @media only screen and (max-width: 62.5em) {
     .influence {
       margin: 5rem 0 10rem 0; } }
   @media only screen and (max-width: 53.125em) {
     .influence {
       margin: 3rem 0 10rem 0; } }
-  @media only screen and (max-width: 37.5em) {
-    .influence {
-      border-bottom: none; } }
 
 .workflow {
   grid-column: fill-start / content-end;
@@ -1172,6 +1212,7 @@ img {
   width: 100%;
   padding: 5rem 0;
   margin: 2rem 0 5rem 0;
+  overflow-x: hidden;
   font-family: "Nunito", sans-serif; }
   @media only screen and (max-width: 62.5em) {
     .workflow {
@@ -1193,10 +1234,6 @@ img {
 
 .contact {
   grid-column: fill-start / fill-end;
-  display: grid;
-  grid-template-columns: 1fr max-content;
-  align-items: center;
-  row-gap: 6rem;
   width: 100%;
   padding: 8rem 0;
   margin: 10rem 0;
@@ -1204,21 +1241,14 @@ img {
   background-image: linear-gradient(to top, rgba(181, 89, 42, 0.8), rgba(240, 144, 39, 0.8)), linear-gradient(to top left, transparent, rgba(0, 0, 0, 0.5)), url("../img/bg-1.png");
   background-size: cover;
   background-position: bottom; }
-  @media only screen and (max-width: 62.5em) {
-    .contact {
-      grid-template-columns: 3fr 1fr; } }
-  @media only screen and (max-width: 53.125em) {
-    .contact {
-      grid-template-columns: 1fr; } }
 
 .founder {
   grid-column: content-start / fill-end;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   margin: 0 0 10rem auto;
   padding-top: 2rem;
   border-top: 3px solid #f09027;
+  overflow-x: hidden;
   font-family: "Nunito", sans-serif; }
   @media only screen and (max-width: 37.5em) {
     .founder {
@@ -1233,21 +1263,16 @@ img {
 
 .company {
   grid-column: fill-start / content-end;
-  display: flex;
-  flex-direction: row-reverse;
   width: 100%;
   margin: 8rem 0 10rem 0;
   padding-right: 12rem;
-  overflow: hidden;
   font-family: "Nunito", sans-serif; }
   @media only screen and (max-width: 53.125em) {
     .company {
       padding-right: 4rem; } }
   @media only screen and (max-width: 37.5em) {
     .company {
-      flex-direction: column-reverse;
-      padding-right: 0;
-      row-gap: 2rem; } }
+      padding-right: 0; } }
   @media only screen and (max-width: 27.5em) {
     .company {
       margin: 5rem 0 10rem 0; } }

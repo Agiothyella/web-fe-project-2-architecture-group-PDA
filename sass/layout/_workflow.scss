@@ -1,4 +1,8 @@
 .workflow {
+  &__wrapper {
+    opacity: 0;
+  }
+
   &__header {
     width: 40%;
     border-bottom: 2px solid $color-tertiary;

@@ -1,10 +1,11 @@
 .service {
-  &__building {
+  &__wrapper {
     display: grid;
     justify-content: space-between;
     align-items: center;
     grid-template-columns: 1fr max-content;
     padding-right: 2rem;
+    opacity: 0;
 
     @media only screen and (max-width: $bp-smallest) {
       grid-template-columns: 1fr;

@@ -1,4 +1,11 @@
 .founder {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    opacity: 0;
+  }
+
   &__header {
     align-self: flex-end;
     border-bottom: 2px solid $color-tertiary;
@@ -141,6 +148,19 @@
 }
 
 .company {
+  &__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: column-reverse;
+      row-gap: 2rem;
+    }
+  }
+
   &__us {
     flex: 1 0 70%;
     display: flex;

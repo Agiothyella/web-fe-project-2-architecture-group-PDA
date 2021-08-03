@@ -53,16 +53,9 @@
 
 .influence {
   grid-column: content-start / fill-end;
-  display: grid;
-  grid-template-columns: minmax(max-content, min-content) 1fr;
   width: 100%;
   margin: 10rem 0;
-  border-bottom: 3px solid $color-tertiary;
   font-family: "Nunito", sans-serif;
-
-  @media only screen and (max-width: $bp-largest) {
-    grid-template-columns: 1fr;
-  }
 
   @media only screen and (max-width: $bp-large) {
     margin: 5rem 0 10rem 0;
@@ -70,10 +63,6 @@
 
   @media only screen and (max-width: $bp-medium) {
     margin: 3rem 0 10rem 0;
-  }
-
-  @media only screen and (max-width: $bp-smallest) {
-    border-bottom: none;
   }
 }
 
@@ -85,6 +74,7 @@
   width: 100%;
   padding: 5rem 0;
   margin: 2rem 0 5rem 0;
+  overflow-x: hidden;
   font-family: "Nunito", sans-serif;
 
   @media only screen and (max-width: $bp-large) {
@@ -111,10 +101,6 @@
 
 .contact {
   grid-column: fill-start / fill-end;
-  display: grid;
-  grid-template-columns: 1fr max-content;
-  align-items: center;
-  row-gap: 6rem;
   width: 100%;
   padding: 8rem 0;
   margin: 10rem 0;
@@ -128,24 +114,15 @@
     url("../img/bg-1.png");
   background-size: cover;
   background-position: bottom;
-
-  @media only screen and (max-width: $bp-large) {
-    grid-template-columns: 3fr 1fr;
-  }
-
-  @media only screen and (max-width: $bp-medium) {
-    grid-template-columns: 1fr;
-  }
 }
 
 .founder {
   grid-column: content-start / fill-end;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   margin: 0 0 10rem auto;
   padding-top: 2rem;
   border-top: 3px solid $color-tertiary;
+  overflow-x: hidden;
   font-family: "Nunito", sans-serif;
 
   @media only screen and (max-width: $bp-smallest) {
@@ -163,12 +140,9 @@
 
 .company {
   grid-column: fill-start / content-end;
-  display: flex;
-  flex-direction: row-reverse;
   width: 100%;
   margin: 8rem 0 10rem 0;
   padding-right: 12rem;
-  overflow: hidden;
   font-family: "Nunito", sans-serif;
 
   @media only screen and (max-width: $bp-medium) {
@@ -176,9 +150,7 @@
   }
 
   @media only screen and (max-width: $bp-smallest) {
-    flex-direction: column-reverse;
     padding-right: 0;
-    row-gap: 2rem;
   }
 
   @media only screen and (max-width: $bp-contact-founder-break) {
