@@ -484,7 +484,6 @@ img {
   flex-direction: row-reverse; }
 
 .footer__link:link, .footer__link:visited {
-  border-bottom: 2px solid transparent;
   color: #fff;
   text-decoration: none;
   margin: 0.5rem 1.5rem;
@@ -492,7 +491,7 @@ img {
   transition: all 0.2s; }
 
 .footer__link:hover, .footer__link:active {
-  border-bottom: 2px solid #f0f2eb; }
+  color: #f0f2eb; }
 
 .header__slider {
   position: absolute;

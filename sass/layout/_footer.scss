@@ -13,7 +13,6 @@
   &__link {
     &:link,
     &:visited {
-      border-bottom: 2px solid transparent;
       color: $color-font-light;
       text-decoration: none;
       margin: 0.5rem 1.5rem;
@@ -23,7 +22,7 @@
 
     &:hover,
     &:active {
-      border-bottom: 2px solid $color-primary;
+      color: $color-primary;
     }
   }
 }
