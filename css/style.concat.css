@@ -698,18 +698,27 @@ img {
   @media only screen and (max-width: 29.6875em) {
     .influence__source:hover {
       transform: translateY(0); } }
+  .influence__source:hover .influence__caption {
+    border-top: 2px solid #b5592a;
+    background-color: #b5592a; }
 
 .influence__card:hover .influence__source {
   transform: translateY(-2rem); }
   @media only screen and (max-width: 29.6875em) {
     .influence__card:hover .influence__source {
       transform: translateY(0); } }
+  .influence__card:hover .influence__source .influence__caption {
+    border-top: 2px solid #b5592a;
+    background-color: #b5592a; }
 
 .influence__card:active .influence__source {
   transform: translateY(-2rem); }
   @media only screen and (max-width: 29.6875em) {
     .influence__card:active .influence__source {
       transform: translateY(0); } }
+  .influence__card:active .influence__source .influence__caption {
+    border-top: 2px solid #b5592a;
+    background-color: #b5592a; }
 
 .influence__img {
   width: 140%;
@@ -727,10 +736,11 @@ img {
   width: 100%;
   padding: 2rem;
   border-top: 2px solid #f09027;
-  background-color: #b5592a;
+  background-color: #f09027;
   color: #fff;
   font-size: 2rem;
-  text-align: center; }
+  text-align: center;
+  transition: all 0.2s; }
   @media only screen and (max-width: 29.6875em) {
     .influence__caption {
       padding: 1rem; } }

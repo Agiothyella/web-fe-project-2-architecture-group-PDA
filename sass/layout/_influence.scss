@@ -89,6 +89,11 @@
     @media only screen and (max-width: $bp-influence-workflow-break) {
       transform: translateY(0);
     }
+
+    .influence__caption {
+      border-top: 2px solid $color-secondary;
+      background-color: $color-secondary;
+    }
   }
 
   &__card:hover &__source {
@@ -97,6 +102,11 @@
     @media only screen and (max-width: $bp-influence-workflow-break) {
       transform: translateY(0);
     }
+
+    .influence__caption {
+      border-top: 2px solid $color-secondary;
+      background-color: $color-secondary;
+    }
   }
 
   &__card:active &__source {
@@ -104,6 +114,11 @@
 
     @media only screen and (max-width: $bp-influence-workflow-break) {
       transform: translateY(0);
+    }
+
+    .influence__caption {
+      border-top: 2px solid $color-secondary;
+      background-color: $color-secondary;
     }
   }
 
@@ -125,10 +140,11 @@
     width: 100%;
     padding: 2rem;
     border-top: 2px solid $color-tertiary;
-    background-color: $color-secondary;
+    background-color: $color-tertiary;
     color: $color-font-light;
     font-size: 2rem;
     text-align: center;
+    transition: all 0.2s;
 
     @media only screen and (max-width: $bp-influence-workflow-break) {
       padding: 1rem;
