@@ -211,7 +211,7 @@ img {
   @media only screen and (max-width: 37.5em) {
     .founder__person-text {
       align-self: flex-start;
-      text-align: justify; } }
+      text-align: left; } }
   @media only screen and (max-width: 27.5em) {
     .founder__person-text {
       padding: 1rem 2rem;
@@ -317,7 +317,8 @@ img {
   background-color: #ebebeb;
   color: #464646;
   font-size: 1.5rem;
-  text-align: justify; }
+  text-align: left;
+  line-height: 1.6; }
 
 .contact__wrapper {
   display: grid;
@@ -775,7 +776,8 @@ img {
   background-color: #ebebeb;
   color: #464646;
   font-size: 1.5rem;
-  text-align: justify; }
+  text-align: left;
+  line-height: 1.6; }
 
 .nav {
   border-bottom: 1px solid transparent;
