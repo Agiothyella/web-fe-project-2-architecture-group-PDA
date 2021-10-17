@@ -18,7 +18,7 @@
   top: 0;
   left: 0;
   padding: 2rem;
-  font-family: "Nunito", sans-serif;
+  font-family: $font-general;
   z-index: 10;
 
   @media only screen and (max-width: $bp-largest) {
@@ -43,7 +43,7 @@
   padding: 5rem 0;
   margin: 10rem 0 5rem 0;
   border-top: 3px solid $color-tertiary;
-  font-family: "Nunito", sans-serif;
+  font-family: $font-general;
 
   @media only screen and (max-width: $bp-smallest) {
     border-top: none;
@@ -55,7 +55,7 @@
   grid-column: content-start / fill-end;
   width: 100%;
   margin: 10rem 0;
-  font-family: "Nunito", sans-serif;
+  font-family: $font-general;
 
   @media only screen and (max-width: $bp-large) {
     margin: 5rem 0 10rem 0;
@@ -75,7 +75,7 @@
   padding: 5rem 0;
   margin: 2rem 0 5rem 0;
   overflow-x: hidden;
-  font-family: "Nunito", sans-serif;
+  font-family: $font-general;
 
   @media only screen and (max-width: $bp-large) {
     margin: 0 0 5rem 0;
@@ -92,7 +92,7 @@
   flex-direction: column;
   align-items: center;
   margin: 10rem 0 8rem 0;
-  font-family: "Nunito", sans-serif;
+  font-family: $font-general;
   opacity: 0;
 
   @media only screen and (max-width: $bp-smallest) {
@@ -105,7 +105,7 @@
   width: 100%;
   padding: 8rem 0;
   margin: 10rem 0;
-  font-family: "Nunito", sans-serif;
+  font-family: $font-general;
   background-image: linear-gradient(
       to top,
       rgba($color-secondary, 0.8),
@@ -124,7 +124,7 @@
   padding-top: 2rem;
   border-top: 3px solid $color-tertiary;
   overflow-x: hidden;
-  font-family: "Nunito", sans-serif;
+  font-family: $font-general;
 
   @media only screen and (max-width: $bp-smallest) {
     border-top: none;
@@ -144,7 +144,7 @@
   width: 100%;
   margin: 8rem 0 10rem 0;
   padding-right: 12rem;
-  font-family: "Nunito", sans-serif;
+  font-family: $font-general;
 
   @media only screen and (max-width: $bp-medium) {
     padding-right: 4rem;
@@ -167,7 +167,7 @@
   width: 100%;
   padding: 2rem 6rem;
   background-color: $color-secondary;
-  font-family: "Nunito", sans-serif;
+  font-family: $font-general;
 
   @media only screen and (max-width: $bp-largest) {
     padding: 2rem 3rem;

@@ -199,7 +199,7 @@ img {
     display: block;
     margin-top: 0.5rem;
     font-size: 1.4rem;
-    font-weight: 600; }
+    font-weight: 400; }
 
 .founder__person-text {
   align-self: center;
@@ -845,7 +845,7 @@ img {
     cursor: pointer;
     color: #464646;
     letter-spacing: 0;
-    font-family: "Barlow", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     transition: all 0.2s; }
     .nav__btn:hover {
       color: #000; }
@@ -864,7 +864,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: #f0f2eb;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   transition: all 0.2s;
   z-index: 11; }
   @media only screen and (max-width: 37.5em) {
@@ -1152,7 +1152,7 @@ img {
   padding: 0 2rem 1rem 2rem;
   color: #464646;
   font-size: 1.3rem;
-  font-family: "Nunito", serif;
+  font-family: "Nunito Sans", sans-serif;
   text-align: center; }
   .workflow__desc span {
     display: block;
@@ -1176,7 +1176,7 @@ img {
   top: 0;
   left: 0;
   padding: 2rem;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   z-index: 10; }
   @media only screen and (max-width: 75em) {
     .nav {
@@ -1197,7 +1197,7 @@ img {
   padding: 5rem 0;
   margin: 10rem 0 5rem 0;
   border-top: 3px solid #f09027;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito Sans", sans-serif; }
   @media only screen and (max-width: 37.5em) {
     .service {
       border-top: none;
@@ -1207,7 +1207,7 @@ img {
   grid-column: content-start / fill-end;
   width: 100%;
   margin: 10rem 0;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito Sans", sans-serif; }
   @media only screen and (max-width: 62.5em) {
     .influence {
       margin: 5rem 0 10rem 0; } }
@@ -1224,7 +1224,7 @@ img {
   padding: 5rem 0;
   margin: 2rem 0 5rem 0;
   overflow-x: hidden;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito Sans", sans-serif; }
   @media only screen and (max-width: 62.5em) {
     .workflow {
       margin: 0 0 5rem 0; } }
@@ -1238,7 +1238,7 @@ img {
   flex-direction: column;
   align-items: center;
   margin: 10rem 0 8rem 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   opacity: 0; }
   @media only screen and (max-width: 37.5em) {
     .project {
@@ -1249,7 +1249,7 @@ img {
   width: 100%;
   padding: 8rem 0;
   margin: 10rem 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   background-image: linear-gradient(to top, rgba(181, 89, 42, 0.8), rgba(240, 144, 39, 0.8)), linear-gradient(to top left, transparent, rgba(0, 0, 0, 0.5)), url("../img/bg-1.png");
   background-size: cover;
   background-position: bottom; }
@@ -1261,7 +1261,7 @@ img {
   padding-top: 2rem;
   border-top: 3px solid #f09027;
   overflow-x: hidden;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito Sans", sans-serif; }
   @media only screen and (max-width: 37.5em) {
     .founder {
       border-top: none;
@@ -1278,7 +1278,7 @@ img {
   width: 100%;
   margin: 8rem 0 10rem 0;
   padding-right: 12rem;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito Sans", sans-serif; }
   @media only screen and (max-width: 53.125em) {
     .company {
       padding-right: 4rem; } }
@@ -1297,7 +1297,7 @@ img {
   width: 100%;
   padding: 2rem 6rem;
   background-color: #b5592a;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito Sans", sans-serif; }
   @media only screen and (max-width: 75em) {
     .footer {
       padding: 2rem 3rem; } }
